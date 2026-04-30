@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Logo } from '@/components/ui/logo'
 import { SITE_CONFIG } from '@/lib/site-config'
 import { siteContent } from '@/config/site.content'
 
@@ -14,7 +15,7 @@ export function FooterOverride() {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="font-display text-lg font-semibold text-[var(--mn-cream)]">{SITE_CONFIG.name}</p>
+            <p className="text-lg font-semibold text-[var(--mn-cream)]">{SITE_CONFIG.name}</p>
             <p className="mt-3 text-sm leading-relaxed text-[color-mix(in_srgb,var(--mn-cream)_72%,white)]">{siteContent.footer.tagline}</p>
             <p className="mt-4 text-xs uppercase tracking-[0.2em] text-[color-mix(in_srgb,var(--mn-coral)_85%,white)]">Media desk</p>
           </div>
