@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, Search, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Logo } from '@/components/ui/logo'
 import { SITE_CONFIG } from '@/lib/site-config'
 import { siteContent } from '@/config/site.content'
 import { useAuth } from '@/lib/auth-context'
@@ -36,9 +37,7 @@ export function NavbarOverride() {
     <header className="sticky top-0 z-50 border-b border-[color-mix(in_srgb,var(--mn-coral)_22%,transparent)] bg-[color-mix(in_srgb,var(--mn-cream)_92%,white)]/95 text-[var(--mn-ink)] backdrop-blur-xl">
       <nav className="mx-auto flex h-[4.25rem] max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex min-w-0 items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl border border-[color-mix(in_srgb,var(--mn-coral)_28%,transparent)] bg-white shadow-sm">
-            <img src="/favicon.png?v=20260401" alt="" width={44} height={44} className="h-full w-full object-contain" />
-          </span>
+          <Logo variant="compact" />
           <span className="min-w-0">
             <span className="block truncate font-display text-lg font-semibold tracking-[-0.03em] sm:text-xl">{SITE_CONFIG.name}</span>
             <span className="hidden text-[10px] font-semibold uppercase tracking-[0.26em] text-[var(--mn-ink-soft)] sm:block">
